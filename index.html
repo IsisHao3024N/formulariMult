@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
     <title>Formulário-Mult</title>
 </head>
+
 <body>
     <main>
         <h1>Cadostro de Usuário</h1>
         <form action="#" method="post" autocomplete="off">
-            <section class="part1">
+            <section class="part1 active">
                 <label for="inome">Informe o seu nome:</label>
                 <input type="text" name="nome" id="inome" placeholder="nome">
                 <label for="itel">Informe o seu telefone:</label>
@@ -18,10 +21,23 @@
                 <input type="email" name="email" id="iemail" placeholder="email">
             </section>
             <section class="part2">
-                
+                <label for="irg">Informe o seu RG:</label>
+                <input type="number" name="rg" id="irg" placeholder="RG">
+                <label for="icpf">Informe o seu CPF:</label>
+                <input type="number" name="cpf" id="icpf" placeholder="CPF">
+                <label for="inasc">Informe a sua data de nascimento:</label>
+                <input type="date" name="nasc" id="inasc" placeholder="data de nascimento">
+            </section>
+            <section class="part3">
+                <label for="icidade">Informe a cidade onde mora:</label>
+                <input type="text" name="cidader" id="icidade" placeholder="Cidade">
+                <label for="icep">Informe o cep:</label>
+                <input type="number" name="cep" id="icep" placeholder="cep">
+                <label for="ibairro">Informe o bairro:</label>
+                <input type="text" name="bairro" id="ibairro" placeholder="Bairro">
             </section>
         </form>
     </main>
-    
 </body>
+
 </html>
