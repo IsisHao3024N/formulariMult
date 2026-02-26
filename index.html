@@ -2,42 +2,83 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/style.css">
-    <title>Formulário-Mult</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="estilo/style.css" />
+    <title>Formulário - Cadastro de Usuário</title>
 </head>
 
 <body>
+
     <main>
-        <h1>Cadostro de Usuário</h1>
+        <h1>Cadastro de Usuário</h1>
+     
         <form action="#" method="post" autocomplete="off">
-            <section class="part1 active">
-                <label for="inome">Informe o seu nome:</label>
-                <input type="text" name="nome" id="inome" placeholder="nome">
-                <label for="itel">Informe o seu telefone:</label>
-                <input type="tel" name="tele" id="itel" placeholder="telefone">
-                <label for="iemail">Informe o seu email:</label>
-                <input type="email" name="email" id="iemail" placeholder="email">
-            </section>
-            <section class="part2">
-                <label for="irg">Informe o seu RG:</label>
-                <input type="number" name="rg" id="irg" placeholder="RG">
-                <label for="icpf">Informe o seu CPF:</label>
-                <input type="number" name="cpf" id="icpf" placeholder="CPF">
-                <label for="inasc">Informe a sua data de nascimento:</label>
-                <input type="date" name="nasc" id="inasc" placeholder="data de nascimento">
-            </section>
-            <section class="part3">
-                <label for="icidade">Informe a cidade onde mora:</label>
-                <input type="text" name="cidader" id="icidade" placeholder="Cidade">
-                <label for="icep">Informe o cep:</label>
-                <input type="number" name="cep" id="icep" placeholder="cep">
-                <label for="ibairro">Informe o bairro:</label>
-                <input type="text" name="bairro" id="ibairro" placeholder="Bairro">
-            </section>
+
+            <!-- Grupo 1: Informações básicas -->
+            <fieldset class="part1 active">
+                <legend>Informações Pessoais</legend>
+
+                <div class="item">
+                    <label for="inome">Informe o seu nome:</label>
+                    <input type="text" name="nome" id="inome" placeholder="Nome" required />
+                </div>
+
+                <div class="item">
+                    <label for="itel">Informe o seu telefone:</label>
+                    <input type="tel" name="telefone" id="itel" placeholder="Telefone" required />
+                </div>
+
+                <div class="item">
+                    <label for="iemail">Informe o seu email:</label>
+                    <input type="email" name="email" id="iemail" placeholder="Email" required />
+                </div>
+            </fieldset>
+
+            <!-- Grupo 2: Documentos -->
+            <fieldset class="part2">
+                <legend>Documentos</legend>
+
+                <div class="item">
+                    <label for="irg">Informe o seu RG:</label>
+                    <input type="text" name="rg" id="irg" placeholder="RG" required />
+                </div>
+
+                <div class="item">
+                    <label for="icpf">Informe o seu CPF:</label>
+                    <input type="text" name="cpf" id="icpf" placeholder="CPF" required />
+                </div>
+
+                <div class="item">
+                    <label for="inasc">Informe a sua data de nascimento:</label>
+                    <input type="date" name="nasc" id="inasc" required />
+                </div>
+            </fieldset>
+
+            <!-- Grupo 3: Endereço -->
+            <fieldset class="part3">
+                <legend>Endereço</legend>
+
+                <div class="item">
+                    <label for="icidade">Informe a cidade onde mora:</label>
+                    <input type="text" name="cidade" id="icidade" placeholder="Cidade" required />
+                </div>
+
+                <div class="item">
+                    <label for="icep">Informe o CEP:</label>
+                    <input type="text" name="cep" id="icep" placeholder="CEP" pattern="\d{5}-?\d{3}" title="Formato: 00000-000" required />
+                </div>
+
+                <div class="item">
+                    <label for="ibairro">Informe o bairro:</label>
+                    <input type="text" name="bairro" id="ibairro" placeholder="Bairro" required />
+                </div>
+            </fieldset>
+
+            <button type="submit" class="next">Enviar</button>
         </form>
     </main>
+
 </body>
 
 </html>
