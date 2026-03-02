@@ -42,8 +42,8 @@ form {
     flex-direction: column;
 }
 
-/* Fieldset estilizado */
-fieldset {
+/* Caixa de cada etapa */
+section {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 20px 25px;
@@ -58,14 +58,12 @@ legend {
     color: #e0d7f5;
 }
 
-/* Cada grupo de campos */
 .item {
     display: flex;
     flex-direction: column;
     margin-bottom: 18px;
 }
 
-/* Label */
 .item > label {
     margin-bottom: 6px;
     font-weight: 500;
@@ -73,7 +71,6 @@ legend {
     color: #f0e9ff;
 }
 
-/* Inputs */
 .item > input {
     padding: 8px 12px;
     font-size: 1rem;
@@ -83,7 +80,6 @@ legend {
     transition: border-color 0.3s ease;
 }
 
-/* Foco visual */
 .item > input:focus {
     outline: none;
     border-color: #a247c1;
@@ -92,8 +88,8 @@ legend {
     color: #333;
 }
 
-/* Botão centralizado */
-button.next {
+button,button.next,
+button.prev {
     align-self: center;
     background-color: #a247c1;
     color: #fff;
@@ -104,36 +100,36 @@ button.next {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button.prev {
+    background-color: #444;
 }
 
 button.next:hover,
-button.next:focus {
+button.prev:hover {
     background-color: #872abf;
-    outline: none;
 }
 
-/* Controle da exibição dos grupos */
-.part1,
-.part2,
-.part3 {
+/* 🔥 Correção do erro principal */
+.part {
     display: none;
 }
 
-.part1.active,
-.part2.active,
-.part3.active {
+.part.active {
     display: block;
 }
 
-/* Responsividade simples */
+/* Responsivo */
 @media (max-width: 600px) {
     main {
         padding: 20px;
         width: 100%;
-        max-width: 100%;
     }
 
-    button.next {
+    button.next,
+    button.prev {
         width: 100%;
         padding: 12px;
     }

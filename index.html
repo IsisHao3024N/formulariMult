@@ -12,73 +12,81 @@
 
     <main>
         <h1>Cadastro de Usuário</h1>
-     
+
         <form action="#" method="post" autocomplete="off">
 
-            <!-- Grupo 1: Informações básicas -->
-            <fieldset class="part1 active">
+            <!-- Grupo 1 -->
+            <section class="part active">
                 <legend>Informações Pessoais</legend>
 
                 <div class="item">
                     <label for="inome">Informe o seu nome:</label>
-                    <input type="text" name="nome" id="inome" placeholder="Nome" required />
+                    <input type="text" id="inome" placeholder="Nome" required />
                 </div>
 
                 <div class="item">
                     <label for="itel">Informe o seu telefone:</label>
-                    <input type="tel" name="telefone" id="itel" placeholder="Telefone" required />
+                    <input type="tel" id="itel" placeholder="Telefone" required />
                 </div>
 
                 <div class="item">
                     <label for="iemail">Informe o seu email:</label>
-                    <input type="email" name="email" id="iemail" placeholder="Email" required />
+                    <input type="email" id="iemail" placeholder="Email" required />
                 </div>
-            </fieldset>
 
-            <!-- Grupo 2: Documentos -->
-            <fieldset class="part2">
+                <button type="button" class="next">Próximo</button>
+            </section>
+
+            <!-- Grupo 2 -->
+            <section class="part">
                 <legend>Documentos</legend>
 
                 <div class="item">
                     <label for="irg">Informe o seu RG:</label>
-                    <input type="text" name="rg" id="irg" placeholder="RG" required />
+                    <input type="text" id="irg" placeholder="RG" required />
                 </div>
 
                 <div class="item">
                     <label for="icpf">Informe o seu CPF:</label>
-                    <input type="text" name="cpf" id="icpf" placeholder="CPF" required />
+                    <input type="text" id="icpf" placeholder="CPF" required />
                 </div>
 
                 <div class="item">
                     <label for="inasc">Informe a sua data de nascimento:</label>
-                    <input type="date" name="nasc" id="inasc" required />
+                    <input type="date" id="inasc" required />
                 </div>
-            </fieldset>
 
-            <!-- Grupo 3: Endereço -->
-            <fieldset class="part3">
+                <button type="button" class="prev">Voltar</button>
+                <button type="button" class="next">Próximo</button>
+            </section>
+
+            <!-- Grupo 3 -->
+            <section class="part">
                 <legend>Endereço</legend>
 
                 <div class="item">
                     <label for="icidade">Informe a cidade onde mora:</label>
-                    <input type="text" name="cidade" id="icidade" placeholder="Cidade" required />
+                    <input type="text" id="icidade" placeholder="Cidade" required />
                 </div>
 
                 <div class="item">
                     <label for="icep">Informe o CEP:</label>
-                    <input type="text" name="cep" id="icep" placeholder="CEP" pattern="\d{5}-?\d{3}" title="Formato: 00000-000" required />
+                    <input type="text" id="icep" placeholder="CEP" required />
                 </div>
 
                 <div class="item">
                     <label for="ibairro">Informe o bairro:</label>
-                    <input type="text" name="bairro" id="ibairro" placeholder="Bairro" required />
+                    <input type="text" id="ibairro" placeholder="Bairro" required />
                 </div>
-            </fieldset>
 
-            <button type="submit" class="next">Enviar</button>
+                <button type="button" class="prev">Voltar</button>
+                <button type="submit">Enviar</button>
+            </section>
+
         </form>
     </main>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
